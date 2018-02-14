@@ -6,8 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <h1>你好，世界！</h1>
+    <div><input type="text" id="code"/> &nbsp;<button id="get">获取</button>&nbsp;<button id="copy" data-value="">复制</button></div>
 
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $("#get").click(function(){
+          var code = $("#code").val();
+          if(code = '1239'){
+            $("#copy").attr('data-value') = '201701252100AnPu';
+          }
+      );
+        
+      $("#copy").click(function(){
+          alert($(this).attr('data-value'));  
+      );
+    </script>
   </body>
 </html>
