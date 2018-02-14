@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div><input type="text" id="code"/> &nbsp;<input type="hidden" id="ios-password"/><span id="android-password"></span>></div>
+    <div><input type="text" id="code"/> &nbsp;<input type="hidden" id="ios-password"/><span id="android-password" style="display: none;"></span></div>
     <div><button id="get">获取</button>&nbsp;<button id="copy">复制</button></div>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -37,7 +37,6 @@
               Url2.select(); // 选择对象  
               document.execCommand("Copy"); // 执行浏览器复制命令  
           } 
-          alert($(this).attr('data-value'));  
       });
     </script>
   </body>
