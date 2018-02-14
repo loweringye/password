@@ -3,16 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+    <style type="text/css">
+        body {
+            line-height: 1;
+            font-family: Microsoft YaHei,Arial,Helvetica,sans-serif;
+        }
+        button{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px 15px;
+            color: #fff;
+            background: #f00;
+
+        }
+    </style>
   </head>
   <body>
-    <div><input type="text" id="code"/> &nbsp;<input type="hidden" id="ios-password"/><span id="android-password" style="display: none;"></span></div>
+    <div><input type="text" id="code"/> &nbsp;<input type="text" id="ios-password" style="opacity: 0;width: 1px;" /><span id="android-password" style="opacity: 0;width: 1px;"></span></div>
     <div><button id="get">获取</button>&nbsp;<button id="copy">复制</button></div>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script>
       $("#get").click(function(){
           var code = $("#code").val();
-          if(code = '1239'){
+          if(code == '1239'){
             $("#android-password").text('201701252100AnPu');
             $("#ios-password").val('201701252100AnPu');
           }
@@ -33,7 +47,7 @@
               // 移除选中的元素  
               window.getSelection().removeAllRanges();  
           }else{  
-              var Url2=document.getElementById("ios-password");//要复制文字的节点  
+              var Url2=document.getElementById("ios-password");//要复制文字的节点 
               Url2.select(); // 选择对象  
               document.execCommand("Copy"); // 执行浏览器复制命令  
           } 
